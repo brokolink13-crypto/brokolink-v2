@@ -1,27 +1,26 @@
-import Button from "../ui/Button";
+import AppCard from "@/components/ui/AppCard";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 
 export default function CreditCard() {
   return (
-    <div className="rounded-3xl bg-gradient-to-r from-green-50 to-white p-6 shadow-md">
+    <AppCard className="bg-gradient-to-r from-green-50 to-white">
 
-      <p className="text-gray-500">
+      <p className="text-zinc-500">
         Available Credits
       </p>
 
-      <h1 className="mt-2 text-5xl font-bold text-green-600">
+      <h2 className="mt-2 text-6xl font-black text-green-600">
         12,450
-      </h1>
+      </h2>
 
-      <p className="mt-1 text-gray-500">
+      <p className="mt-2 text-zinc-500">
         ≈ 124 Videos Remaining
       </p>
 
-      <div className="mt-6">
-        <Button>
-          Top Up Credits
-        </Button>
-      </div>
+      <PrimaryButton className="mt-6">
+        Top Up Credits
+      </PrimaryButton>
 
-    </div>
+    </AppCard>
   );
 }

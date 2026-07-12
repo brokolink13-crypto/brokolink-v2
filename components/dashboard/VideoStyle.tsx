@@ -8,11 +8,11 @@ const styles = [
 
 export default function VideoStyle() {
   return (
-    <div className="mt-8">
+    <section>
 
-      <div className="mb-4 flex justify-between">
+      <div className="mb-4 flex items-center justify-between">
 
-        <h2 className="font-bold text-xl">
+        <h2 className="text-2xl font-bold">
           Video Style
         </h2>
 
@@ -22,13 +22,13 @@ export default function VideoStyle() {
 
       </div>
 
-      <div className="flex gap-3 overflow-x-auto pb-2">
+      <div className="flex gap-4 overflow-x-auto pb-2">
 
         {styles.map((style) => (
 
           <div
             key={style}
-            className="min-w-[120px] rounded-2xl border bg-white p-5 text-center shadow-sm"
+            className="min-w-[140px] rounded-2xl border bg-white p-6 text-center shadow-sm"
           >
             {style}
           </div>
@@ -37,6 +37,6 @@ export default function VideoStyle() {
 
       </div>
 
-    </div>
+    </section>
   );
 }

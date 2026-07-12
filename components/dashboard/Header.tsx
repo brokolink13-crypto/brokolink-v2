@@ -1,29 +1,27 @@
+import { Bell } from "@/components/icons";
+
 export default function Header() {
   return (
-    <div className="mb-8 flex items-center justify-between">
+    <header className="flex items-start justify-between">
 
       <div>
 
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-black">
           Hi, Broko 👋
         </h1>
 
-        <p className="mt-2 text-gray-500">
+        <p className="mt-2 max-w-xs text-zinc-500">
           Ready to create your next winning affiliate video?
         </p>
 
       </div>
 
-      <button className="relative">
+      <button className="rounded-full bg-white p-3 shadow-sm border border-zinc-100">
 
-        <div className="text-3xl">
-          🔔
-        </div>
-
-        <span className="absolute right-1 top-1 h-2 w-2 rounded-full bg-green-500"></span>
+        <Bell size={22} />
 
       </button>
 
-    </div>
+    </header>
   );
 }

@@ -1,4 +1,4 @@
-import OnboardingScreen from "@/components/screens/OnboardingScreen";
+import OnboardingScreen from "@/features/onboarding/components/OnboardingScreen";
 
 export default function Page() {
   return <OnboardingScreen />;

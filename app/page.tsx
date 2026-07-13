@@ -1,5 +1,5 @@
-import WelcomeScreen from "@/components/screens/WelcomeScreen";
+import WelcomeScreen from "@/features/welcome/components/WelcomeScreen";
 
-export default function Home() {
+export default function Page() {
   return <WelcomeScreen />;
 }

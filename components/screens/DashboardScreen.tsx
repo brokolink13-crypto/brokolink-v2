@@ -1,3 +1,4 @@
+import BottomNavigation from "../layout/BottomNavigation";
 import Header from "../dashboard/Header";
 import CreditCard from "../dashboard/CreditCard";
 import LinkInput from "../dashboard/LinkInput";
@@ -8,7 +9,7 @@ import RecentVideos from "../dashboard/RecentVideos";
 
 export default function DashboardScreen() {
   return (
-    <main className="space-y-6 bg-gray-50 p-6">
+    <main className="space-y-6 bg-gray-50 p-6 pb-28">
 
       <Header />
 
@@ -23,6 +24,8 @@ export default function DashboardScreen() {
       <AffiliateTip />
 
       <RecentVideos />
+
+      <BottomNavigation />
 
     </main>
   );

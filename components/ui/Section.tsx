@@ -1,28 +1,28 @@
-type SectionProps = {
+import { ReactNode } from "react";
+
+interface Props {
   title: string;
-  action?: string;
-  children: React.ReactNode;
-};
+  action?: ReactNode;
+  children: ReactNode;
+}
 
 export default function Section({
   title,
   action,
   children,
-}: SectionProps) {
+}: Props) {
   return (
-    <section className="mt-8">
+    <section className="space-y-4">
 
-      <div className="mb-4 flex items-center justify-between">
+      <div className="flex justify-between items-center">
 
-        <h2 className="text-xl font-bold">
+        <h2 className="text-2xl font-bold">
+
           {title}
+
         </h2>
 
-        {action && (
-          <button className="text-sm font-medium text-green-600">
-            {action}
-          </button>
-        )}
+        {action}
 
       </div>
 

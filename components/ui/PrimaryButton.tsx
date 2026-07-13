@@ -1,5 +1,6 @@
 import { ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
+import { theme } from "@/styles/theme";
 
 export default function PrimaryButton({
   className,
@@ -9,8 +10,13 @@ export default function PrimaryButton({
   return (
     <button
       {...props}
+      style={{
+        background: theme.colors.primary,
+        boxShadow: theme.shadow.button,
+        borderRadius: theme.radius.lg,
+      }}
       className={cn(
-        "w-full rounded-2xl bg-green-600 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:bg-green-700 active:scale-95",
+        "w-full py-4 text-lg font-bold text-white transition-all duration-300 active:scale-95",
         className
       )}
     >

@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { theme } from "@/styles/theme";
 
 interface AppCardProps {
   children: ReactNode;
@@ -12,8 +13,13 @@ export default function AppCard({
 }: AppCardProps) {
   return (
     <div
+      style={{
+        background: theme.colors.surface,
+        borderRadius: theme.radius.xl,
+        boxShadow: theme.shadow.card,
+      }}
       className={cn(
-        "rounded-3xl bg-white shadow-sm border border-zinc-100 p-6",
+        "border border-zinc-100 p-6",
         className
       )}
     >

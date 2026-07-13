@@ -1,35 +1,47 @@
 "use client";
 
-import {
-  House,
-  Video,
-  Gift,
-  User,
-} from "lucide-react";
+import Link from "next/link";
+import { Home, Video, Gift, User } from "lucide-react";
 
 export default function BottomNavigation() {
   return (
-    <nav className="fixed bottom-0 left-1/2 flex w-full max-w-md -translate-x-1/2 justify-around border-t bg-white py-4 shadow-lg">
+    <nav className="fixed bottom-0 left-0 right-0 border-t border-zinc-200 bg-white">
 
-      <button className="flex flex-col items-center text-green-600">
-        <House size={22} />
-        <span className="text-xs">Home</span>
-      </button>
+      <div className="mx-auto flex max-w-md justify-around py-3">
 
-      <button className="flex flex-col items-center text-gray-400">
-        <Video size={22} />
-        <span className="text-xs">Videos</span>
-      </button>
+        <Link
+          href="/dashboard"
+          className="flex flex-col items-center text-green-600"
+        >
+          <Home size={22} />
+          <span className="text-xs">Home</span>
+        </Link>
 
-      <button className="flex flex-col items-center text-gray-400">
-        <Gift size={22} />
-        <span className="text-xs">Rewards</span>
-      </button>
+        <Link
+          href="/videos"
+          className="flex flex-col items-center text-zinc-500"
+        >
+          <Video size={22} />
+          <span className="text-xs">Videos</span>
+        </Link>
 
-      <button className="flex flex-col items-center text-gray-400">
-        <User size={22} />
-        <span className="text-xs">Profile</span>
-      </button>
+        <Link
+          href="/rewards"
+          className="flex flex-col items-center text-zinc-500"
+        >
+          <Gift size={22} />
+          <span className="text-xs">Rewards</span>
+        </Link>
+
+        <Link
+          href="/profile"
+          className="flex flex-col items-center text-zinc-500"
+        >
+          <User size={22} />
+          <span className="text-xs">Profile</span>
+        </Link>
+
+      </div>
 
     </nav>
   );

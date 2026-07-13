@@ -1,12 +1,22 @@
-type BadgeProps = {
-  children: React.ReactNode;
-};
+import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+
+interface Props {
+  children: ReactNode;
+  className?: string;
+}
 
 export default function Badge({
   children,
-}: BadgeProps) {
+  className,
+}: Props) {
   return (
-    <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">
+    <span
+      className={cn(
+        "inline-flex items-center rounded-full bg-green-50 text-primary px-3 py-1 text-sm font-medium",
+        className
+      )}
+    >
       {children}
     </span>
   );

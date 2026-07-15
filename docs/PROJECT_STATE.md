@@ -1,20 +1,18 @@
 # 🥦 BROKOLINK PROJECT STATE
 
 Version: 2.0 Alpha
-
-Last Updated: 12 July 2026
-
+Last Updated: 15 July 2026
 Status: Active Development
 
 ---
 
 # Project Overview
 
-BrokoLink adalah platform AI yang membantu affiliate marketer membuat video pendek TikTok hanya dari link produk.
+BrokoLink adalah platform AI Workflow yang membantu affiliate marketer membuat video pendek hanya dari sebuah product link.
 
 Target utama bukan editor video.
 
-Target utama adalah affiliate pemula yang ingin membuat video berkualitas dalam waktu kurang dari lima menit.
+Target utama adalah affiliate pemula yang ingin membuat video profesional dalam waktu kurang dari lima menit.
 
 BrokoLink bukan AI Chat.
 
@@ -24,19 +22,11 @@ BrokoLink adalah AI Workflow.
 
 # Product Vision
 
-User hanya melakukan satu hal:
-
 Paste Product Link
-
-Selanjutnya seluruh proses dilakukan AI secara otomatis.
-
-Workflow:
-
-Paste Link
 
 ↓
 
-Product Analysis
+AI Product Analysis
 
 ↓
 
@@ -60,11 +50,11 @@ Video Rendering
 
 ↓
 
-Thumbnail
+Thumbnail Generation
 
 ↓
 
-Export
+Export Ready
 
 ---
 
@@ -78,17 +68,34 @@ Current Sprint
 
 Sprint 4
 
+Sprint Status
+
+🚧 Active
+
+Current Goal
+
+Production UI Foundation
+
 Current Focus
 
-Production UI
+Authentication & Welcome Experience
 
-Current Screen
+Completed Recently
 
-Dashboard
+✅ Logo Production Assets
+✅ Brand Identity
+✅ Welcome Screen
+✅ Onboarding Flow
+✅ UI Foundation
+✅ Reusable Components Foundation
 
-Next Screen
+Next Focus
 
-Welcome
+Login Screen
+Register Screen
+Forgot Password
+OTP Verification
+Dashboard Production UI
 
 ---
 
@@ -100,6 +107,7 @@ Frontend
 - React
 - TypeScript
 - Tailwind CSS
+- Framer Motion
 
 Backend
 
@@ -111,7 +119,7 @@ Authentication
 
 Database
 
-- PostgreSQL (Supabase)
+- PostgreSQL
 
 Storage
 
@@ -141,7 +149,7 @@ Presentation Layer
 
 ↓
 
-Components
+Reusable Components
 
 ↓
 
@@ -153,7 +161,7 @@ Services
 
 ↓
 
-Workflow
+Workflow Engine
 
 ↓
 
@@ -161,16 +169,16 @@ AI Providers
 
 ↓
 
-Database
+Supabase
 
 Rules
 
-- UI tidak boleh memanggil AI secara langsung.
-- Semua AI harus melalui Workflow.
-- Business Logic tidak boleh berada di UI.
-- Semua komponen harus reusable.
-- Gunakan TypeScript.
-- Jangan gunakan any.
+- UI tidak boleh memanggil AI langsung.
+- Business Logic berada di Workflow.
+- Components reusable.
+- Strict TypeScript.
+- No any.
+- Production Ready.
 
 ---
 
@@ -180,19 +188,17 @@ app/
 
 components/
 
-services/
+features/
 
 workflow/
 
-ai/
+services/
 
 hooks/
 
-types/
-
-styles/
-
 lib/
+
+types/
 
 public/
 
@@ -202,21 +208,21 @@ docs/
 
 # Design Language
 
-Mengikuti:
+Reference
 
-- Apple Human Interface
+- Apple HIG
 - Linear
 - Stripe
 - Notion
 
-Visual Style
+Visual
 
 - Minimal
 - Premium
-- White Space
+- Large White Space
 - Rounded Corner
 - Soft Shadow
-- Green Primary
+- Green Identity
 
 ---
 
@@ -224,44 +230,43 @@ Visual Style
 
 Broko adalah maskot resmi BrokoLink.
 
-Broko hadir hampir di seluruh aplikasi.
-
-Broko digunakan pada:
+Digunakan pada
 
 - Welcome
 - Onboarding
 - Login
 - Register
+- Forgot Password
+- OTP
 - Dashboard
-- AI Loading
-- Rewards
 - Empty State
+- Rewards
 - Success
-- Profile
+- AI Loading
 
-Seluruh ilustrasi Broko wajib mengikuti Broko Asset Bible.
+Semua ilustrasi mengikuti Broko Asset Bible.
 
 ---
 
 # Economy
 
-Mata Uang
+Currency
 
 Broko Seeds
 
-Sumber Reward
+Reward
 
-- Ads
-- Referral
 - Daily Login
+- Referral
 - Achievement
+- Ads
 - Event
 
-Model Bisnis
+Business Model
 
 Freemium
 
-Subscription hanya fitur tambahan.
+Subscription sebagai fitur premium.
 
 ---
 
@@ -319,104 +324,124 @@ Sprint 3
 
 Sprint 4
 
-🚧 Dashboard Production UI
+🚧 Production UI
+
+Progress
+
+🟩 Logo Assets Complete
+
+🟩 Welcome Complete
+
+🟩 Onboarding Complete
+
+🟩 UI Component Foundation Complete
+
+🟨 Authentication UI In Progress
+
+🟨 Dashboard Production UI In Progress
 
 ---
 
 # Existing Screens
 
-001 Splash
+✅ Splash
 
-002 Onboarding
+✅ Welcome
 
-003 Login
+✅ Onboarding
 
-004 Register
+🟨 Login
 
-005 Forgot Password
+🟨 Register
 
-006 OTP Verification
+🟨 Forgot Password
 
-007 Dashboard
+🟨 OTP
 
-008 Product Link
+🟨 Dashboard
 
-009 AI Analysis
+🟨 Product Link
 
-010 AI Script
+⬜ AI Analysis
 
-011 AI Voice
+⬜ AI Script
 
-012 AI Rendering
+⬜ AI Voice
 
-013 Video Ready
+⬜ AI Rendering
 
-014 Rewards
+⬜ Video Ready
 
-015 Profile
+⬜ Rewards
 
-016 History
+⬜ Profile
 
-017 Settings
+⬜ History
 
-018 Logo
+⬜ Settings
 
 ---
 
 # Current Priority
 
-1. Dashboard Final UI
-
-2. Broko Asset Bible
-
-3. Asset Pack #1
-
-4. Welcome Screen
-
-5. Login
-
-6. Register
-
-7. AI Workflow
+1. Authentication UI
+2. Dashboard Production UI
+3. Product Link Flow
+4. AI Workflow
+5. Supabase Auth
+6. Backend Integration
 
 ---
 
 # Development Rules
 
 - One Sprint = One Goal
-- Commit setelah setiap Sprint
-- Tidak membuat prototype
-- Production Ready
-- Gunakan reusable component
-- Jangan duplicate code
-- Satu file satu tanggung jawab
-- Seluruh asset mengikuti Asset Bible
-- Seluruh UI mengikuti mockup BrokoLink
-- Seluruh keputusan teknis mengutamakan scalability
+- One Commit = One Feature
+- Update PROJECT_STATE setelah Sprint selesai
+- Update CHANGELOG setelah Sprint selesai
+- Production Ready Only
+- Reusable Components
+- No Duplicate Code
+- One File One Responsibility
+- Asset mengikuti Asset Bible
+- UI mengikuti Mockup BrokoLink
+- Prioritaskan Scalability
 
 ---
 
-# Current Repository Status
+# Repository Status
 
 Architecture
 
 ✅ Stable
 
-UI Foundation
-
-✅ Complete
-
 Design System
 
+✅ Stable
+
+Logo Assets
+
 ✅ Complete
 
-Feature Development
+Welcome
+
+✅ Complete
+
+Onboarding
+
+✅ Complete
+
+Reusable UI
+
+🚧 Growing
+
+Authentication
 
 🚧 In Progress
 
-Asset Library
+Dashboard
 
-🚧 Planning
+🚧 In Progress
 
 AI Engine
 
@@ -434,16 +459,14 @@ Deployment
 
 # Next Milestone
 
-Finish Dashboard Production UI
+Finish Authentication UI
 
-Create Broko Asset Bible
+Finish Dashboard UI
 
-Generate Broko Asset Pack #1
+Connect Supabase Auth
 
-Implement Welcome Screen
+Build Product Link Workflow
 
-Implement Login Screen
+Integrate AI Pipeline
 
-Implement Register Screen
-
-Integrate AI Workflow
+Deploy Alpha

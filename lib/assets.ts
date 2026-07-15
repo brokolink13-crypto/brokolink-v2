@@ -1,15 +1,12 @@
 export const Assets = {
   logo: {
-    full: "/assets/logo/brokolink-logo.png",
+    horizontal: "/assets/logo/brokolink-logo-horizontal.png",
+    vertical: "/assets/logo/brokolink-logo-vertical.png",
     icon: "/assets/logo/brokolink-icon.png",
-    favicon: "/assets/logo/favicon.png",
-  },
-
-  marketplace: {
-    shopee: "/assets/marketplace/shopee.png",
-    tokopedia: "/assets/marketplace/tokopedia.png",
-    tiktok: "/assets/marketplace/tiktok.png",
-    lazada: "/assets/marketplace/lazada.png",
+    favicon: "/assets/logo/brokolink-favicon.png",
+    apple: "/assets/logo/apple-touch-icon.png",
+    android192: "/assets/logo/android-chrome-192.png",
+    android512: "/assets/logo/android-chrome-512.png",
   },
 
   broko: {
@@ -30,11 +27,5 @@ export const Assets = {
     reward: {
       celebrate: "/assets/broko/reward/broko-celebrate.png",
     },
-
-    ai: {},
-
-    onboarding: {},
-
-    profile: {},
   },
 } as const;

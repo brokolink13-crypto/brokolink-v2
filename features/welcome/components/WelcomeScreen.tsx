@@ -1,31 +1,84 @@
-import Image from "next/image";
-import { Assets } from "@/lib/assets";
+"use client";
+
+import { motion } from "framer-motion";
+import AppLogo from "@/components/ui/AppLogo";
+import BrokoCharacter from "@/components/ui/BrokoCharacter";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 
 export default function WelcomeScreen() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-white px-6">
-      <Image
-        src={Assets.broko.hero.default}
-        alt="Broko"
-        width={260}
-        height={260}
-        priority
-        className="mb-8"
-      />
+    <main className="flex min-h-screen flex-col bg-white">
 
-      <div className="mb-12 text-center">
-        <h1 className="text-5xl font-black text-green-700">
-          🥦 BrokoLink
-        </h1>
-
-        <p className="mt-4 text-xl text-gray-600">
-          AI Affiliate Video Generator
-        </p>
+      {/* Header */}
+      <div className="flex justify-center pt-10">
+        <motion.div
+          initial={{ opacity: 0, y: -25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <AppLogo width={170} />
+        </motion.div>
       </div>
 
-      <button className="w-full max-w-sm rounded-2xl bg-green-600 py-4 text-xl font-bold text-white shadow-lg transition hover:bg-green-700">
-        Get Started
-      </button>
+      {/* Body */}
+      <div className="flex flex-1 flex-col items-center justify-center px-6">
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            delay: 0.25,
+            duration: 0.6,
+          }}
+        >
+          <BrokoCharacter
+            pose="default"
+            size={340}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 0.5,
+            duration: 0.5,
+          }}
+          className="mt-6 text-center"
+        >
+          <h1 className="text-5xl font-black text-green-700">
+            BrokoLink
+          </h1>
+
+          <p className="mt-4 text-xl text-gray-600">
+            AI Affiliate Video Generator
+          </p>
+
+          <p className="mt-3 text-gray-400">
+            Create • Publish • Earn
+          </p>
+        </motion.div>
+
+      </div>
+
+      {/* Footer */}
+      <div className="px-6 pb-10">
+
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        >
+          <PrimaryButton>
+            Get Started
+          </PrimaryButton>
+        </motion.div>
+
+      </div>
+
     </main>
   );
 }

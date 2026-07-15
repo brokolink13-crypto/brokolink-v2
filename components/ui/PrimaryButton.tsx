@@ -1,26 +1,37 @@
-import { ButtonHTMLAttributes } from "react";
-import { cn } from "@/lib/utils";
-import { theme } from "@/styles/theme";
+"use client";
+
+import { motion } from "framer-motion";
+
+type Props = {
+  children: React.ReactNode;
+  onClick?: () => void;
+};
 
 export default function PrimaryButton({
-  className,
   children,
-  ...props
-}: ButtonHTMLAttributes<HTMLButtonElement>) {
+  onClick,
+}: Props) {
   return (
-    <button
-      {...props}
-      style={{
-        background: theme.colors.primary,
-        boxShadow: theme.shadow.button,
-        borderRadius: theme.radius.lg,
+    <motion.button
+      whileHover={{
+        scale: 1.02,
       }}
-      className={cn(
-        "w-full py-4 text-lg font-bold text-white transition-all duration-300 active:scale-95",
-        className
-      )}
+      whileTap={{
+        scale: 0.97,
+      }}
+      onClick={onClick}
+      className="
+        w-full
+        rounded-2xl
+        bg-green-600
+        py-4
+        text-xl
+        font-bold
+        text-white
+        shadow-xl
+      "
     >
       {children}
-    </button>
+    </motion.button>
   );
 }

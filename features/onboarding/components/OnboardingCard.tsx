@@ -2,11 +2,11 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function Card({
+export default function OnboardingCard({
   children,
 }: Props) {
   return (
-    <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
+    <div className="flex flex-1 flex-col items-center justify-center px-6">
       {children}
     </div>
   );

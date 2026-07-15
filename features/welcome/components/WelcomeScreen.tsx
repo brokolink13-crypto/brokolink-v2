@@ -1,11 +1,13 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import AppLogo from "@/components/ui/AppLogo";
 import BrokoCharacter from "@/components/ui/BrokoCharacter";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 
 export default function WelcomeScreen() {
+  const router = useRouter();
   return (
     <main className="flex min-h-screen flex-col bg-white">
 
@@ -72,9 +74,11 @@ export default function WelcomeScreen() {
             duration: 0.5,
           }}
         >
-          <PrimaryButton>
-            Get Started
-          </PrimaryButton>
+          <PrimaryButton
+  onClick={() => router.push("/onboarding")}
+>
+  Get Started
+</PrimaryButton>
         </motion.div>
 
       </div>
